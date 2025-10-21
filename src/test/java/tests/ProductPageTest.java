@@ -28,7 +28,7 @@ public class ProductPageTest {
 
     @BeforeEach
     public void setUp() {
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().driverVersion("141.0.7390.108").setup();
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");
@@ -166,4 +166,5 @@ public class ProductPageTest {
             driver.quit();
         }
     }
+
 }

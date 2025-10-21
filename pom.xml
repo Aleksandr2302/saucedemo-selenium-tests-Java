@@ -70,6 +70,8 @@
                     <systemPropertyVariables>
                         <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
                     </systemPropertyVariables>
+                    <parallel>none</parallel>
+                    <threadCount>1</threadCount>
                 </configuration>
             </plugin>
 

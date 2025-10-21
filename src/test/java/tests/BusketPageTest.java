@@ -24,7 +24,7 @@ public class BusketPageTest {
 
     @BeforeEach
     public void setUp() {
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().driverVersion("141.0.7390.108").setup();
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");

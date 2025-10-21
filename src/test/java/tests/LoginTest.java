@@ -22,7 +22,7 @@ public class LoginTest {
 
     @BeforeEach
     public void setUp() {
-        WebDriverManager.chromedriver().driverVersion("140.0.7339.128").setup();
+        WebDriverManager.chromedriver().driverVersion("141.0.7390.108").setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");
         driver = new ChromeDriver(options);
