@@ -30,7 +30,16 @@ mvn test
 ``` bash
 allure serve allure-results
 ```
+### 5. CI/CD
+``` bash
+Tests are integrated with CI/CD pipelines, so they can be executed automatically on every commit or pull request.
 
+Example setups:
+
+Jenkins: automatically builds the project, runs tests, and generates Allure reports.
+
+GitHub Actions: workflow triggers on push/PR and runs the same test commands.
+```
 
 📁 Project structure
 ``` bash
