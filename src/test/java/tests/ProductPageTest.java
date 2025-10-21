@@ -28,15 +28,17 @@ public class ProductPageTest {
 
     @BeforeEach
     public void setUp() {
-        WebDriverManager.chromedriver().driverVersion("141.0.7390.108").setup();
-
+        WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");
-        options.addArguments("--disable-notifications");
-        options.addArguments("--disable-infobars");
-        options.addArguments("--user-data-dir=C:/Temp/ChromeProfile"); // временный профиль
-        options.addArguments("--profile-directory=Default");
-        options.addArguments("--incognito");
+
+        String dir = System.getProperty("java.io.tmpdir") + "/chrome-" + System.currentTimeMillis();
+        options.addArguments("user-data-dir=" + dir);
+
+        // Run without GUI for  CI
+        options.addArguments("--headless=new");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
 
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
