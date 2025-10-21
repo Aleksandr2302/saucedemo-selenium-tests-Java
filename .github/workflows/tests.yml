@@ -1,0 +1,22 @@
+name: Java CI with Maven
+
+on:
+  push:            # 🔹 Запуск при любом push
+  pull_request:    # 🔹 Запуск при любом PR
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Build and run tests with Maven
+        run: mvn -B clean test
