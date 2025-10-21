@@ -51,5 +51,5 @@ selenium-java-tests/
 └── README.md                   # This file
 ```
 
-### Example
+###  Example
 ![Allure Report](img/img.png)
